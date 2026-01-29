@@ -36,11 +36,11 @@ export interface Spell {
 }
 
 export type Archetype =
-    | 'tank'
+    | 'warrior'
     | 'mage'
-    | 'assassin'
-    | 'investigator'
-    | 'thematic';
+    | 'rogue'
+    | 'cleric'
+    | 'paladin';
 
 export interface CharacterSheet {
     id?: number;

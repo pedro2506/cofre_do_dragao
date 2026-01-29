@@ -1,0 +1,7 @@
+
+> tmp-app@0.0.0 build
+> tsc -b && vite build
+
+src/components/character/CharacterView.tsx(13,18): error TS2678: Type '"tank"' is not comparable to type 'Archetype'.
+src/components/character/CharacterView.tsx(15,18): error TS2678: Type '"assassin"' is not comparable to type 'Archetype'.
+src/components/character/CharacterView.tsx(16,18): error TS2678: Type '"investigator"' is not comparable to type 'Archetype'.

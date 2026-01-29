@@ -1,57 +1,79 @@
-# 🐉 Cofre do Dragão 
+# 🐉 Cofre do Dragão - D&D 5E Manager
 
-O **Cofre do Dragão** é um gerenciador de fichas de personagem para Dungeons & Dragons 5ª Edição, projetado com uma abordagem **Mobile-First** e **Premium Aesthetics**. Ele oferece uma experiência imersiva e rápida para jogadores que precisam de agilidade durante as sessões de RPG.
+O **Cofre do Dragão** é um gerenciador de fichas moderno para Dungeons & Dragons 5ª Edição, adaptado para ser **simples, direto e 100% em português!** Projetado com uma abordagem **Mobile-First**, ele é a ferramenta ideal para jogadores iniciantes e veteranos que buscam agilidade na mesa.
 
-![Preview do Projeto](https://pedro2506.github.io/cofre_do_dragao/avatars/tank.png)
+---
 
-## 🚀 Funcionalidades
+## 🎮 O Que É?
 
-- **Gestão de Personagens:** Crie e gerencie múltiplas fichas com persistência local.
-- **Arquétipos Dinâmicos:** Escolha entre Tanque, Mago, Assassino, Investigador ou Temático para iniciar sua ficha instantaneamente.
-- **Motor de Regras 5E:** Cálculos automáticos de modificadores, bônus de proficiência, CA e perícias.
-- **Grimório Arcano:** Sistema de magias integrado e modular.
-- **Save Game (JSON):** Exporte e importe suas fichas para manter backups ou trocar de dispositivo.
-- **PWA (Suporte Offline):** Instale o aplicativo no seu celular e use-o mesmo sem conexão com a internet.
-- **Design Imersivo:** Layout temático "Vault" com animações fluidas (Framer Motion).
+Um ecossistema digital inspirado em D&D 5e, focado em:
+- ✅ **Regras Claras:** O essencial para não travar a diversão.
+- ✅ **Criação Rápida:** Heróis prontos em minutos com o sistema de Classes.
+- ✅ **Combate Dinâmico:** Gerenciamento de Vida, CA e Ações em tempo real.
+- ✅ **PWA (Offline):** Funciona sem internet através da instalação no celular.
 
-## 🛠️ Tecnologias Utilizadas
+---
 
-- **Frontend:** [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilização:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Estado Global:** [Zustand](https://docs.pmnd.rs/zustand/)
-- **Banco de Dados (Local):** [Dexie.js](https://dexie.org/) (IndexedDB)
-- **Animações:** [Framer Motion](https://www.framer.com/motion/)
-- **Ícones:** [Lucide React](https://lucide.dev/)
-- **PWA:** [Vite Plugin PWA](https://vite-pwa-org.netlify.app/)
+## 🚀 Comece Aqui
 
-## 📂 Estrutura do Projeto
+### Para Jogadores
+1.  **Escolha sua Classe:** Guerreiro, Mago, Ladino, Clérigo ou Paladino.
+2.  **Rolar Dados:** O app automatiza seus modificadores baseados nos atributos.
+3.  **Aprenda em 5 Minutos:** Leia o [GUIA-RAPIDO.md](./GUIA-RAPIDO.md) para dominar o básico.
 
-```text
-src/
-├── components/          # Componentes de UI (Layout, Character, etc)
-├── db/                  # Configuração do Dexie (IndexedDB)
-├── hooks/               # Hooks customizados
-├── rules/               # Motor de regras D&D 5E e configurações de arquétipos
-├── store/               # Estado global com Zustand
-├── types/               # Definições de tipos TypeScript
-└── utils/               # Funções utilitárias (Serialização, Cálculos)
-```
+### Para Mestres
+- Explore os diretórios de documentação para acessar regras de combate, modelos de habilidades e personagens de exemplo.
+- Customize as dificuldades (CD) e desafios conforme a sua mesa.
 
-## 💻 Como rodar o projeto
+---
 
-1.  Clone este repositório.
-2.  Instale as dependências:
-    ```bash
-    npm install
-    ```
-3.  Inicie o servidor de desenvolvimento:
-    ```bash
-    npm run dev
-    ```
+## 🎯 Classes Disponíveis
+
+| Classe | Estilo | Força | Fraqueza |
+| :--- | :--- | :--- | :--- |
+| 🗡️ **Guerreiro** | Combate frontal | Dano e resistência | Baixa magia |
+| 🔮 **Mago** | Magia ofensiva | Versatilidade | Pouca saúde |
+| �️🐍 **Ladino** | Ataques surpresa | Mobilidade | Combate longo |
+| ✨ **Clérigo** | Cura e suporte | Versatilidade | Menos dano |
+| ⚡ **Paladino** | Combate + magia | Equilíbrio | Polivalente |
+
+---
+
+## 🎲 Resumo do Sistema
+
+### Ataque e Testes
+- **Ataque:** `1d20 + Modificador ≥ CA do alvo`
+- **Teste de Atributo:** `1d20 + Modificador ≥ Dificuldade (CD)`
+
+### O Turno de Combate
+No seu turno, você tem:
+- **1 Ação:** Atacar ou usar Magia.
+- **1 Ação Bônus:** Habilidades rápidas.
+- **1 Movimento:** Até 9 metros.
+- **1 Reação:** Responder a eventos fora do seu turno.
+
+---
+
+## 📂 Estrutura de Documentação
+
+- `GUIA-RAPIDO.md`: Resumo para novos jogadores.
+- `classes/`: Detalhes das classes jogáveis.
+- `sistema/`: Regras de combate e progressão.
+- `templates/`: Modelos para novos heróis e habilidades.
+- `exemplos/`: Exemplos práticos de uso.
+
+---
+
+## �️ Tecnologias
+
+- **React 19 + Vite + TypeScript**
+- **Tailwind CSS v4** (Design Premium Dark)
+- **Zustand + Dexie.js** (Persistência Offline)
+- **Framer Motion** (Animações)
+
+---
 
 ## 👨‍💻 Desenvolvedor
-
 **Pedro Miranda**
 
 - 🐙 **GitHub:** [pedro2506](https://github.com/pedro2506)
@@ -59,4 +81,4 @@ src/
 - 📧 **Email:** [t3pedropaulo@gmail.com](mailto:t3pedropaulo@gmail.com)
 
 ---
-💬 *Projeto criado com fins educacionais e para portfólio.*
+💬 *Projeto criado com fins educacionais e para portfólio. Boa aventura!*

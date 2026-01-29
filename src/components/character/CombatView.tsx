@@ -1,6 +1,19 @@
 import React from 'react';
 import { useCharacterStore } from '../../store/useCharacterStore';
-import { Heart, Shield, Zap, Sword, Info } from 'lucide-react';
+import { Heart, Shield, Zap, Sword, Info, CheckCircle2 } from 'lucide-react';
+
+const ActionButton: React.FC<{ label: string, color: string }> = ({ label, color }) => {
+    const [used, setUsed] = React.useState(false);
+    return (
+        <button
+            onClick={() => setUsed(!used)}
+            className={`flex flex-col items-center justify-center p-3 rounded-2xl border transition-all ${used ? 'bg-slate-800/50 border-slate-700 opacity-40' : color + ' bg-slate-900/40'}`}
+        >
+            <span className="text-[10px] font-black uppercase tracking-widest mb-1">{label}</span>
+            {used ? <CheckCircle2 size={14} /> : <div className="w-[14px] h-[14px] rounded-full border border-current" />}
+        </button>
+    );
+};
 
 export const CombatView: React.FC = () => {
     const { currentChar, updateBasicInfo } = useCharacterStore();
@@ -66,6 +79,19 @@ export const CombatView: React.FC = () => {
                     <span className="text-xl font-black text-slate-100">{currentChar.speed}ft</span>
                 </div>
             </div>
+
+            {/* Gerenciamento de Ações do Turno */}
+            <section className="space-y-4">
+                <div className="flex items-center justify-between">
+                    <h3 className="text-xs font-black text-slate-600 uppercase tracking-[0.2em]">Recursos do Turno</h3>
+                </div>
+
+                <div className="grid grid-cols-3 gap-3">
+                    <ActionButton label="Ação" color="border-emerald-500/30 text-emerald-500" />
+                    <ActionButton label="Bônus" color="border-cyan-500/30 text-cyan-500" />
+                    <ActionButton label="Reação" color="border-rose-500/30 text-rose-500" />
+                </div>
+            </section>
 
             {/* Seção de Ações */}
             <section className="space-y-4">

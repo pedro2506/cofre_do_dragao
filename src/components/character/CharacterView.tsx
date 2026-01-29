@@ -10,10 +10,11 @@ export const CharacterView: React.FC = () => {
 
     const getArchetypeIcon = () => {
         switch (currentChar.archetype) {
-            case 'tank': return <Shield size={32} className="text-amber-500" />;
+            case 'warrior': return <Shield size={32} className="text-amber-500" />;
             case 'mage': return <Book size={32} className="text-blue-500" />;
-            case 'assassin': return <Sword size={32} className="text-emerald-500" />;
-            case 'investigator': return <ScrollText size={32} className="text-purple-500" />;
+            case 'rogue': return <Sword size={32} className="text-emerald-500" />;
+            case 'cleric': return <ScrollText size={32} className="text-cyan-500" />;
+            case 'paladin': return <Shield size={32} className="text-amber-200" />;
             default: return <User size={32} className="text-slate-500" />;
         }
     };

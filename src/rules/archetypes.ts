@@ -12,59 +12,59 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
     };
 
     switch (archetype) {
-        case 'tank':
+        case 'warrior':
             return {
-                class: 'Guerreiro / Paladino',
+                class: 'Guerreiro',
                 attributes: {
-                    ...mapToAttr({ ...baseAttributes, strength: 16, constitution: 14 }),
+                    ...mapToAttr({ ...baseAttributes, strength: 16, constitution: 14, dexterity: 12 }),
                 },
                 avatar: 'avatars/tank.png',
                 hp: { current: 12, max: 12, temp: 0 },
-                ac: 18,
-                config: { showSpells: false, showSkills: true, showInventory: true, showBackground: false }
+                ac: 16,
+                config: { showSpells: false, showSkills: true, showInventory: true, showBackground: true }
             };
         case 'mage':
             return {
-                class: 'Mago / Feiticeiro',
+                class: 'Mago',
                 attributes: {
-                    ...mapToAttr({ ...baseAttributes, intelligence: 16, dexterity: 14 }),
+                    ...mapToAttr({ ...baseAttributes, intelligence: 16, dexterity: 14, constitution: 12 }),
                 },
                 avatar: 'avatars/mage.png',
                 hp: { current: 7, max: 7, temp: 0 },
                 ac: 12,
-                config: { showSpells: true, showSkills: true, showInventory: true, showBackground: false }
+                config: { showSpells: true, showSkills: true, showInventory: true, showBackground: true }
             };
-        case 'assassin':
+        case 'rogue':
             return {
-                class: 'Ladino / Ranger',
+                class: 'Ladino',
                 attributes: {
-                    ...mapToAttr({ ...baseAttributes, dexterity: 18, charisma: 14 }),
+                    ...mapToAttr({ ...baseAttributes, dexterity: 18, charisma: 14, constitution: 12 }),
                 },
                 avatar: 'avatars/assassin.png',
                 hp: { current: 9, max: 9, temp: 0 },
                 ac: 15,
-                config: { showSpells: false, showSkills: true, showInventory: true, showBackground: false }
+                config: { showSpells: false, showSkills: true, showInventory: true, showBackground: true }
             };
-        case 'investigator':
+        case 'cleric':
             return {
-                class: 'Bardo / Investigador',
+                class: 'Clérigo',
                 attributes: {
-                    ...mapToAttr({ ...baseAttributes, intelligence: 14, wisdom: 16, charisma: 14 }),
-                },
-                avatar: 'avatars/investigator.png',
-                hp: { current: 8, max: 8, temp: 0 },
-                ac: 13,
-                config: { showSpells: true, showSkills: true, showInventory: true, showBackground: true }
-            };
-        case 'thematic':
-            return {
-                class: 'Personagem Temático',
-                attributes: {
-                    ...mapToAttr({ ...baseAttributes, charisma: 16, wisdom: 14 }),
+                    ...mapToAttr({ ...baseAttributes, wisdom: 16, constitution: 14, strength: 12 }),
                 },
                 avatar: 'avatars/thematic.png',
                 hp: { current: 10, max: 10, temp: 0 },
-                ac: 10,
+                ac: 16,
+                config: { showSpells: true, showSkills: true, showInventory: true, showBackground: true }
+            };
+        case 'paladin':
+            return {
+                class: 'Paladino',
+                attributes: {
+                    ...mapToAttr({ ...baseAttributes, strength: 16, charisma: 14, constitution: 14 }),
+                },
+                avatar: 'avatars/investigator.png',
+                hp: { current: 12, max: 12, temp: 0 },
+                ac: 18,
                 config: { showSpells: true, showSkills: true, showInventory: true, showBackground: true }
             };
         default:
@@ -74,9 +74,9 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
 
 export const ARCHETYPES_CONFIG: { type: Archetype; label: string; sub: string; avatar: string }[] = [
     {
-        type: 'tank',
-        label: 'Tanque',
-        sub: 'Força e Defesa',
+        type: 'warrior',
+        label: 'Guerreiro',
+        sub: 'Dano e Resistência',
         avatar: 'avatars/tank.png'
     },
     {
@@ -86,22 +86,22 @@ export const ARCHETYPES_CONFIG: { type: Archetype; label: string; sub: string; a
         avatar: 'avatars/mage.png'
     },
     {
-        type: 'assassin',
-        label: 'Assassino',
+        type: 'rogue',
+        label: 'Ladino',
         sub: 'Agilidade e Astúcia',
-        avatar: '/avatars/assassin.png'
+        avatar: 'avatars/assassin.png'
     },
     {
-        type: 'investigator',
-        label: 'Investigador',
-        sub: 'Mente e Percepção',
-        avatar: 'avatars/investigator.png'
-    },
-    {
-        type: 'thematic',
-        label: 'Temático',
-        sub: 'Narrativa Pura',
+        type: 'cleric',
+        label: 'Clérigo',
+        sub: 'Cura e Suporte',
         avatar: 'avatars/thematic.png'
+    },
+    {
+        type: 'paladin',
+        label: 'Paladino',
+        sub: 'Combate e Magia',
+        avatar: 'avatars/investigator.png'
     },
 ];
 
