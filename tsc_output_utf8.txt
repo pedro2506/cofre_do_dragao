@@ -1,0 +1,3 @@
+src/store/useCharacterStore.ts(2,31): error TS6196: 'Skill' is declared but never used.
+src/utils/serialization.ts(1,15): error TS6196: 'Archetype' is declared but never used.
+src/utils/serialization.ts(1,42): error TS6196: 'Skill' is declared but never used.

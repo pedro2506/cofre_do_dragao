@@ -1,4 +1,4 @@
-import type { Archetype, CharacterSheet, Skill } from '../types';
+import type { CharacterSheet } from '../types';
 
 /**
  * Exporta uma ficha de personagem para um arquivo JSON.

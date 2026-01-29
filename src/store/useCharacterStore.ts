@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { CharacterSheet, Skill, Archetype } from '../types';
+import type { CharacterSheet, Archetype } from '../types';
 import { db } from '../db';
 import { calculateModifier, calculateProficiencyBonus, calculateSkillBonus } from '../rules/dnd-engine';
 import { getArchetypePreset, initializeSkills } from '../rules/archetypes';
