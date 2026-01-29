@@ -17,7 +17,7 @@ export default defineConfig(({ command }) => ({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       devOptions: {
-        enabled: true
+        enabled: false // Desabilita o SW em dev para evitar warnings de glob pattern
       },
       manifest: {
         name: 'Cofre do Dragão',
