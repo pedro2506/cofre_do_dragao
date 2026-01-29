@@ -24,7 +24,7 @@ export const CharacterView: React.FC = () => {
             <section className="flex items-center gap-6 bg-slate-900/40 p-6 rounded-3xl border border-white/5">
                 <div className="w-20 h-20 rounded-2xl bg-slate-800 flex items-center justify-center border-2 border-slate-700/50 relative overflow-hidden">
                     {getArchetypeIcon()}
-                    {currentChar.avatar && <img src={currentChar.avatar} alt="Avatar" className="absolute inset-0 object-cover" />}
+                    {currentChar.avatar && <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${currentChar.avatar}`} alt="Avatar" className="absolute inset-0 object-cover" />}
                 </div>
                 <div className="flex-1 space-y-1">
                     <input

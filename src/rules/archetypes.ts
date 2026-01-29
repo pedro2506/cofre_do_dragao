@@ -18,7 +18,7 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
                 attributes: {
                     ...mapToAttr({ ...baseAttributes, strength: 16, constitution: 14 }),
                 },
-                avatar: '/avatars/tank.png',
+                avatar: 'avatars/tank.png',
                 hp: { current: 12, max: 12, temp: 0 },
                 ac: 18,
                 config: { showSpells: false, showSkills: true, showInventory: true, showBackground: false }
@@ -29,7 +29,7 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
                 attributes: {
                     ...mapToAttr({ ...baseAttributes, intelligence: 16, dexterity: 14 }),
                 },
-                avatar: '/avatars/mage.png',
+                avatar: 'avatars/mage.png',
                 hp: { current: 7, max: 7, temp: 0 },
                 ac: 12,
                 config: { showSpells: true, showSkills: true, showInventory: true, showBackground: false }
@@ -40,7 +40,7 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
                 attributes: {
                     ...mapToAttr({ ...baseAttributes, dexterity: 18, charisma: 14 }),
                 },
-                avatar: '/avatars/assassin.png',
+                avatar: 'avatars/assassin.png',
                 hp: { current: 9, max: 9, temp: 0 },
                 ac: 15,
                 config: { showSpells: false, showSkills: true, showInventory: true, showBackground: false }
@@ -51,7 +51,7 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
                 attributes: {
                     ...mapToAttr({ ...baseAttributes, intelligence: 14, wisdom: 16, charisma: 14 }),
                 },
-                avatar: '/avatars/investigator.png',
+                avatar: 'avatars/investigator.png',
                 hp: { current: 8, max: 8, temp: 0 },
                 ac: 13,
                 config: { showSpells: true, showSkills: true, showInventory: true, showBackground: true }
@@ -62,7 +62,7 @@ export const getArchetypePreset = (archetype: Archetype): Partial<CharacterSheet
                 attributes: {
                     ...mapToAttr({ ...baseAttributes, charisma: 16, wisdom: 14 }),
                 },
-                avatar: '/avatars/thematic.png',
+                avatar: 'avatars/thematic.png',
                 hp: { current: 10, max: 10, temp: 0 },
                 ac: 10,
                 config: { showSpells: true, showSkills: true, showInventory: true, showBackground: true }
@@ -77,13 +77,13 @@ export const ARCHETYPES_CONFIG: { type: Archetype; label: string; sub: string; a
         type: 'tank',
         label: 'Tanque',
         sub: 'Força e Defesa',
-        avatar: '/avatars/tank.png'
+        avatar: 'avatars/tank.png'
     },
     {
         type: 'mage',
         label: 'Mago',
         sub: 'Poder Arcano',
-        avatar: '/avatars/mage.png'
+        avatar: 'avatars/mage.png'
     },
     {
         type: 'assassin',
@@ -95,13 +95,13 @@ export const ARCHETYPES_CONFIG: { type: Archetype; label: string; sub: string; a
         type: 'investigator',
         label: 'Investigador',
         sub: 'Mente e Percepção',
-        avatar: '/avatars/investigator.png'
+        avatar: 'avatars/investigator.png'
     },
     {
         type: 'thematic',
         label: 'Temático',
         sub: 'Narrativa Pura',
-        avatar: '/avatars/thematic.png'
+        avatar: 'avatars/thematic.png'
     },
 ];
 

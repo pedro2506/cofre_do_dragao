@@ -116,7 +116,7 @@ export default function App() {
                 >
                   <div className={`w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden border border-white/5`}>
                     {char.avatar ? (
-                      <img src={char.avatar} alt={char.name} className="w-full h-full object-cover" />
+                      <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${char.avatar}`} alt={char.name} className="w-full h-full object-cover" />
                     ) : (
                       <User size={20} className="text-slate-600" />
                     )}
@@ -267,7 +267,7 @@ function ArchetypeButton({ onClick, label, sub, avatar }: { onClick: () => void,
   return (
     <button onClick={onClick} className="w-full p-4 rounded-xl bg-slate-900/60 backdrop-blur-md border border-slate-800/80 hover:border-amber-500/30 flex items-center gap-4 transition-all">
       <div className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden border border-white/5">
-        <img src={avatar} alt={label} className="w-full h-full object-cover" />
+        <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${avatar}`} alt={label} className="w-full h-full object-cover" />
       </div>
       <div className="text-left">
         <span className="block font-bold text-slate-100">{label}</span>

@@ -11,7 +11,7 @@ export const BackgroundLayout: React.FC<BackgroundLayoutProps> = ({ children }) 
             <div
                 className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-1000"
                 style={{
-                    backgroundImage: 'url("/bg-vault.png")',
+                    backgroundImage: `url("${import.meta.env.BASE_URL.replace(/\/$/, '')}/bg-vault.png")`,
                     filter: 'blur(1px) brightness(0.6)'
                 }}
             />
