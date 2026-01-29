@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# 🐉 Cofre do Dragão - D&D 5E Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Cofre do Dragão** é um gerenciador de fichas de personagem para Dungeons & Dragons 5ª Edição, projetado com uma abordagem **Mobile-First** e **Premium Aesthetics**. Ele oferece uma experiência imersiva e rápida para jogadores que precisam de agilidade durante as sessões de RPG.
 
-Currently, two official plugins are available:
+![Preview do Projeto](https://pedro2506.github.io/cofre_do_dragao/avatars/tank.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
 
-## React Compiler
+- **Gestão de Personagens:** Crie e gerencie múltiplas fichas com persistência local.
+- **Arquétipos Dinâmicos:** Escolha entre Tanque, Mago, Assassino, Investigador ou Temático para iniciar sua ficha instantaneamente.
+- **Motor de Regras 5E:** Cálculos automáticos de modificadores, bônus de proficiência, CA e perícias.
+- **Grimório Arcano:** Sistema de magias integrado e modular.
+- **Save Game (JSON):** Exporte e importe suas fichas para manter backups ou trocar de dispositivo.
+- **PWA (Suporte Offline):** Instale o aplicativo no seu celular e use-o mesmo sem conexão com a internet.
+- **Design Imersivo:** Layout temático "Vault" com animações fluidas (Framer Motion).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **Frontend:** [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilização:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Estado Global:** [Zustand](https://docs.pmnd.rs/zustand/)
+- **Banco de Dados (Local):** [Dexie.js](https://dexie.org/) (IndexedDB)
+- **Animações:** [Framer Motion](https://www.framer.com/motion/)
+- **Ícones:** [Lucide React](https://lucide.dev/)
+- **PWA:** [Vite Plugin PWA](https://vite-pwa-org.netlify.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Estrutura do Projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── components/          # Componentes de UI (Layout, Character, etc)
+├── db/                  # Configuração do Dexie (IndexedDB)
+├── hooks/               # Hooks customizados
+├── rules/               # Motor de regras D&D 5E e configurações de arquétipos
+├── store/               # Estado global com Zustand
+├── types/               # Definições de tipos TypeScript
+└── utils/               # Funções utilitárias (Serialização, Cálculos)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💻 Como rodar o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  Clone este repositório.
+2.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+3.  Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👨‍💻 Desenvolvedor
+
+**Pedro Miranda**
+
+- 🐙 **GitHub:** [pedro2506](https://github.com/pedro2506)
+- 🔗 **LinkedIn:** [Pedro Miranda](https://www.linkedin.com/in/pedro-miranda)
+- 📧 **Email:** [t3pedropaulo@gmail.com](mailto:t3pedropaulo@gmail.com)
+
+---
+💬 *Projeto criado com fins educacionais e para portfólio.*
