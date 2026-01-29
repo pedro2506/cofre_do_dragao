@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/cofre_do_dragao/',
   server: {
     host: true, // Permite acesso pela rede local
   },
