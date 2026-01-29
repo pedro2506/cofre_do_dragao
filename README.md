@@ -1,4 +1,4 @@
-# 🐉 Cofre do Dragão - D&D 5E Manager
+# 🐉 Cofre do Dragão 
 
 O **Cofre do Dragão** é um gerenciador de fichas de personagem para Dungeons & Dragons 5ª Edição, projetado com uma abordagem **Mobile-First** e **Premium Aesthetics**. Ele oferece uma experiência imersiva e rápida para jogadores que precisam de agilidade durante as sessões de RPG.
 
